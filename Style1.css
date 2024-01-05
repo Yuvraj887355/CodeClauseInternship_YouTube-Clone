@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+
+/* header */
+
+.material-icons {
+  color: rgb(205, 199, 199);
+}
+
+.sidebar__category i {
+  color: rgb(205, 199, 199);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 15px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left img {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.header i {
+  padding: 0 7px;
+  cursor: pointer;
+}
+
+.header__search form {
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-radius: 15px;
+}
+
+.header__search input {
+  width: 500px;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  height: 100%;
+ border-bottom-left-radius: 15px;
+ border-top-left-radius: 15px;
+ background-color: #000000;
+ border: 1px solid rgb(48, 46, 46);
+}
+
+.header__search button {
+  width: 3.5rem;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  border: none;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #2e2b2bfe;
+}
+
+.mic i{
+  height: 2.3rem;
+  width: 2.3rem;
+ margin-left: 9px;
+ color: rgb(205, 199, 199);
+ border-radius: 50%;
+ background-color: #2e2b2bfe;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#search_rem{
+  display: none;
+}
+
+.header__icons2{
+  display: none;
+} 
+
+.footer{
+  display: none;
+}
+
+/* Sidebar */
+.mainBody {
+  height: calc(100vh - 70px);
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100%;
+  width: 230px;
+  background-color: rgb(7, 7, 7);
+  overflow-y: scroll;
+}
+
+.sidebar__categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.sidebar__category {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+}
+
+.sidebar__category span {
+  margin-left: 15px;
+  color: rgb(237, 228, 228);
+}
+
+.sidebar__category:hover {
+  background: #443f3f;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  height: 0.50px;
+  background-color: #615e5e;
+  border: none;
+}
+
+
+/* videos */
+
+.videos {
+  background-color: #0f0c0c;
+  width: 100%;
+  height: 100%;
+  padding: 15px 15px;
+  border-top: 1px solid #302d2d;
+  overflow-y: scroll;
+}
+
+.videos__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.video {
+  width: 310px;
+
+  margin-bottom: 30px;
+}
+
+.video__thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.video__thumbnail img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.author img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.video__details {
+  display: flex;
+  margin-top: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h3 {
+  color: rgb(253, 249, 249);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(172, 170, 170);
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(3, 3, 3);
+}
+
+@media (max-width: 425px) {
+  .header__search {
+    display: none;
+  }
+
+
+  #search_rem{
+    display: inline;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  #account_rem{
+    display: none;
+  }
+
+  .header__left img {
+    width: 100px;
+    margin-left: 0;
+  }
+
+  .header{
+    height: 55px;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 15px;
+    background-color: #000000;
+  }
+
+  .footer i{
+    color: rgb(205, 199, 199);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__search {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  } 
+
+  .show-sidebar {
+    display: inline;
+    position: fixed;
+    top: 4.4rem;
+    height: auto;
+  }
+
+  #menu{
+    display: none
+  }
+  
+}
+
+@media (max-width: 941px) {
+  .header__search input {
+    width: 300px;
+  }
+}
